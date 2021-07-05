@@ -5,7 +5,7 @@
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>959,3879</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>959,3069</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -77,7 +77,6 @@
       <AssemblyReference>CredentialManagement</AssemblyReference>
       <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -86,7 +85,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Extract Work Items Data" DisplayName="Extract Work Items Data" sap:VirtualizedContainerService.HintSize="902,3714" sap2010:WorkflowViewState.IdRef="Sequence_21">
+  <Sequence sap2010:Annotation.AnnotationText="Extract Work Items Data" DisplayName="Extract Work Items Data" sap:VirtualizedContainerService.HintSize="558,2904" sap2010:WorkflowViewState.IdRef="Sequence_21">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="TotalExtractDataTable">
         <Variable.Default>
@@ -104,7 +103,29 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="User Do-While with Data Scraping to extract Work Items data" DisplayName="Do-Loop" sap:VirtualizedContainerService.HintSize="860,3591" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="516,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="627d9ab2-68d0-4129-8258-0d2e60d1734a" InformativeScreenshot="67730f8799d3b9c78f1e4a274b84e505" Selector="&lt;html app='chrome.exe' title='ACME System *' /&gt;&lt;webctrl tag='BUTTON' innertext='                          Work Items' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <Sequence sap2010:Annotation.AnnotationText="User Do-While with Data Scraping to extract Work Items data" DisplayName="Do-Loop" sap:VirtualizedContainerService.HintSize="516,2635" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
           <Variable.Default>
@@ -121,16 +142,16 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Loop Extract Data from Work Items Page" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="818,2564" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Loop Extract Data from Work Items Page" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="474,1438" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
         <ui:InterruptibleDoWhile.Body>
-          <TryCatch sap:VirtualizedContainerService.HintSize="782,2364" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch sap:VirtualizedContainerService.HintSize="438,1238" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap2010:Annotation.AnnotationText="Use Data Scraping to extract data page by page" DisplayName="Body" sap:VirtualizedContainerService.HintSize="744,1688" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence sap2010:Annotation.AnnotationText="Use Data Scraping to extract data page by page" DisplayName="Body" sap:VirtualizedContainerService.HintSize="347,562" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,7 +159,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Assign-PageNumber" sap:VirtualizedContainerService.HintSize="702,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign DisplayName="Assign-PageNumber" sap:VirtualizedContainerService.HintSize="305,61" sap2010:WorkflowViewState.IdRef="Assign_1">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">
                       <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">PageNumber</mca:CSharpReference>
@@ -150,7 +171,7 @@
                     </InArgument>
                   </Assign.Value>
                 </Assign>
-                <Sequence sap2010:Annotation.AnnotationText="Use Data Scraping to extract data from ACME Work Items page" DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="702,1464" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence sap2010:Annotation.AnnotationText="Use Data Scraping to extract data from ACME Work Items page" DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="305,338" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,7 +179,7 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="660,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="sd:DataTable">
                         <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">ExtractDataTable</mca:CSharpReference>
@@ -170,20 +191,20 @@
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" sap2010:Annotation.AnnotationText="Extract Data with PageNumber++" DisplayName="Attach Window -ACME Work Items Page" sap:VirtualizedContainerService.HintSize="660,1240" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="2bd00b2a9372cdef0e6d8b8c528bb52f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Work Items - Google Chrome' /&gt;">
+                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" sap2010:Annotation.AnnotationText="Extract Data with PageNumber++" DisplayName="Attach Window -ACME Work Items Page" sap:VirtualizedContainerService.HintSize="263,99" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="2bd00b2a9372cdef0e6d8b8c528bb52f" Selector="&lt;wnd app='chrome.exe' title='ACME System 1*' /&gt;">
                     <ui:WindowScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do-DataScraping Main" sap:VirtualizedContainerService.HintSize="626,1063" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence DisplayName="Do-DataScraping Main" sap:VirtualizedContainerService.HintSize="526,720" sap2010:WorkflowViewState.IdRef="Sequence_15">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ExtractData ContinueOnError="True" DelayBetweenPagesMS="500" DisplayName="Extract Structured Data 'table'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap:VirtualizedContainerService.HintSize="584,106" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="1000" SimulateClick="True">
+                          <ui:ExtractData ContinueOnError="True" DelayBetweenPagesMS="500" DisplayName="Extract Structured Data 'table'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="1000" SimulateClick="True">
                             <ui:ExtractData.DataTable>
                               <InOutArgument x:TypeArguments="sd:DataTable">
                                 <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">ExtractDataTable</mca:CSharpReference>
@@ -205,7 +226,7 @@
                               </ui:Target>
                             </ui:ExtractData.Target>
                           </ui:ExtractData>
-                          <ui:UiElementExists DisplayName="Element Exists 'A  https://acme-test.ui...'" sap:VirtualizedContainerService.HintSize="584,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                          <ui:UiElementExists DisplayName="Element Exists 'A  https://acme-test.ui...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                             <ui:UiElementExists.Exists>
                               <OutArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">ExistingNextPageButton</mca:CSharpReference>
@@ -222,7 +243,7 @@
                               </ui:Target>
                             </ui:UiElementExists.Target>
                           </ui:UiElementExists>
-                          <If sap:VirtualizedContainerService.HintSize="584,243" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If sap:VirtualizedContainerService.HintSize="484,243" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">!ExistingNextPageButton || ExtractDataTable==null || ExtractDataTable.Rows==null || ExtractDataTable.Rows.Count==0</mca:CSharpValue>
@@ -241,12 +262,18 @@
                               </Assign>
                             </If.Then>
                           </If>
-                          <If sap:VirtualizedContainerService.HintSize="584,396" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If sap:VirtualizedContainerService.HintSize="484,53" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">PageNumber==1</mca:CSharpValue>
                               </InArgument>
                             </If.Condition>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
                               <Assign sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_3">
                                 <Assign.To>
@@ -303,6 +330,8 @@
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:WindowScope>
@@ -310,7 +339,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="748,358" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,358" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -360,10 +389,11 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InterruptibleDoWhile>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter ExtractDataTable with condition &quot;Type==in_Config[&quot;ExtractWorkItemTypeName&quot;].ToString() &quot;  to out_ExtractDataTable" DisplayName="Filter Data Table With Type and Status" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="818,244" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter ExtractDataTable with condition &quot;Type==in_Config[&quot;ExtractWorkItemTypeName&quot;].ToString() &quot;  to out_ExtractDataTable" DisplayName="Filter Data Table With Type and Status" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="474,244" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Keep">
         <ui:FilterDataTable.DataTable>
           <InArgument x:TypeArguments="sd:DataTable">
             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">TotalExtractDataTable</mca:CSharpValue>
@@ -401,7 +431,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:OutputDataTable sap2010:Annotation.AnnotationText="Output ExtractDataTable without Filtered" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="818,68" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
+      <ui:OutputDataTable sap2010:Annotation.AnnotationText="Output ExtractDataTable without Filtered" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="474,68" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
         <ui:OutputDataTable.DataTable>
           <InArgument x:TypeArguments="sd:DataTable">
             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">TotalExtractDataTable</mca:CSharpValue>
@@ -418,12 +448,12 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:OutputDataTable>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="818,63" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="474,63" sap2010:WorkflowViewState.IdRef="WriteLine_2">
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">"Extract Data: "+TotalExtractDataTableString</mca:CSharpValue>
         </InArgument>
       </WriteLine>
-      <ui:OutputDataTable sap2010:Annotation.AnnotationText="Output ExtractDataTable with Filtered" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="818,68" sap2010:WorkflowViewState.IdRef="OutputDataTable_2">
+      <ui:OutputDataTable sap2010:Annotation.AnnotationText="Output ExtractDataTable with Filtered" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="474,68" sap2010:WorkflowViewState.IdRef="OutputDataTable_2">
         <ui:OutputDataTable.DataTable>
           <InArgument x:TypeArguments="sd:DataTable">
             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">out_ExtractDataTable</mca:CSharpValue>
@@ -440,18 +470,29 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:OutputDataTable>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="818,63" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="474,63" sap2010:WorkflowViewState.IdRef="WriteLine_1">
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">"Extract Data: "+ExtractDataString</mca:CSharpValue>
         </InArgument>
       </WriteLine>
-      <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" Delimitator="Comma" DisplayName="Write CSV" FilePath="data.csv" sap:VirtualizedContainerService.HintSize="818,158" sap2010:WorkflowViewState.IdRef="WriteCsvFile_5">
-        <ui:WriteCsvFile.DataTable>
-          <InArgument x:TypeArguments="sd:DataTable">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">out_ExtractDataTable</mca:CSharpValue>
-          </InArgument>
-        </ui:WriteCsvFile.DataTable>
-      </ui:WriteCsvFile>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="474,328" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" Delimitator="Comma" DisplayName="Write CSV" FilePath="data.csv" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="WriteCsvFile_5">
+              <ui:WriteCsvFile.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">out_ExtractDataTable</mca:CSharpValue>
+                </InArgument>
+              </ui:WriteCsvFile.DataTable>
+            </ui:WriteCsvFile>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
     </Sequence>
   </Sequence>
 </Activity>

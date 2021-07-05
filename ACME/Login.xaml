@@ -6,7 +6,7 @@
     <x:Property Name="in_Password" Type="InArgument(ss:SecureString)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1120,2116</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>959,2573</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="58">
@@ -78,10 +78,9 @@
       <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>netstandard</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="My demo user name is 18901599114@163.com, password is 273509239, you can find UserName and Password in Variables.&#xA;&#xA;If user want to use window credential, please enbale this activity and follow &quot;Get Secure Credential&quot; sequence to create yours." sap:VirtualizedContainerService.HintSize="876,1951" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence sap2010:Annotation.AnnotationText="My demo user name is 18901599114@163.com, password is 273509239, you can find UserName and Password in Variables.&#xA;&#xA;If user want to use window credential, please enbale this activity and follow &quot;Get Secure Credential&quot; sequence to create yours." sap:VirtualizedContainerService.HintSize="876,2408" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="Password">
         <Variable.Default>
@@ -98,9 +97,75 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <If sap:VirtualizedContainerService.HintSize="834,417" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">String.IsNullOrEmpty(in_UserName)</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="343,173" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetRobotCredential TimeoutMS="{x:Null}" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="301,81" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+            <ui:GetRobotCredential.AssetName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">in_Config["ACME_Credential"].ToString()</mca:CSharpValue>
+              </InArgument>
+            </ui:GetRobotCredential.AssetName>
+            <ui:GetRobotCredential.Password>
+              <OutArgument x:TypeArguments="ss:SecureString">
+                <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">Password</mca:CSharpReference>
+              </OutArgument>
+            </ui:GetRobotCredential.Password>
+            <ui:GetRobotCredential.Username>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">UserName</mca:CSharpReference>
+              </OutArgument>
+            </ui:GetRobotCredential.Username>
+          </ui:GetRobotCredential>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="305,254" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">UserName</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">in_UserName</mca:CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign.To>
+              <OutArgument x:TypeArguments="ss:SecureString">
+                <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">Password</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="ss:SecureString">
+                <mca:CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">in_Password</mca:CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Else>
+    </If>
     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" AlterIfDisabled="False" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  email'" EmptyField="True" sap:VirtualizedContainerService.HintSize="834,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="False">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee6af570-7e5d-435b-91c1-eeb07a2454bf" InformativeScreenshot="095d9ee6aaaf6516c47481c72c1bf669" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;&lt;webctrl tag='INPUT' type='email' name='email' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee6af570-7e5d-435b-91c1-eeb07a2454bf" InformativeScreenshot="095d9ee6aaaf6516c47481c72c1bf669" Selector="&lt;html app='chrome.exe' title='ACME *' /&gt;&lt;webctrl tag='INPUT' type='email' name='email' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -111,18 +176,18 @@
       </ui:TypeInto.Target>
       <ui:TypeInto.Text>
         <InArgument x:TypeArguments="x:String">
-          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">in_UserName</mca:CSharpValue>
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">UserName</mca:CSharpValue>
         </InArgument>
       </ui:TypeInto.Text>
     </ui:TypeInto>
     <ui:TypeSecureText DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="False" sap2010:Annotation.AnnotationText="new System.Net.NetworkCredential(&quot;&quot;, &quot;6666&quot;).SecurePassword" ClickBeforeTyping="False" DisplayName="Type Secure Text 'INPUT  password'" EmptyField="True" sap:VirtualizedContainerService.HintSize="834,152" sap2010:WorkflowViewState.IdRef="TypeSecureText_3" SendWindowMessages="False" SimulateType="False">
       <ui:TypeSecureText.SecureText>
         <InArgument x:TypeArguments="ss:SecureString">
-          <mca:CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">in_Password</mca:CSharpValue>
+          <mca:CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">Password</mca:CSharpValue>
         </InArgument>
       </ui:TypeSecureText.SecureText>
       <ui:TypeSecureText.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="717a7ede-dbc9-4f7e-9cb1-76135c488284" InformativeScreenshot="851a48bee1feb54134b2c2a3f54b240b" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="717a7ede-dbc9-4f7e-9cb1-76135c488284" InformativeScreenshot="851a48bee1feb54134b2c2a3f54b240b" Selector="&lt;html app='chrome.exe' title='ACME *' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -149,7 +214,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c12619b4-6fcd-4fd9-8761-cf81cbe1e676" InformativeScreenshot="5c0cfaebca5cc10e09fd9a42ad753023" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;&lt;webctrl tag='BUTTON' type='submit' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c12619b4-6fcd-4fd9-8761-cf81cbe1e676" InformativeScreenshot="5c0cfaebca5cc10e09fd9a42ad753023" Selector="&lt;html app='chrome.exe' title='ACME *' /&gt;&lt;webctrl tag='BUTTON' type='submit' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -166,7 +231,7 @@
         </OutArgument>
       </ui:UiElementExists.Exists>
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="34baa664-93df-4f5b-a04b-50f26c720871" InformativeScreenshot="67730f8799d3b9c78f1e4a274b84e505" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;&lt;webctrl aaname='                          Work Items' tag='BUTTON' innertext='                          Work Items' type='button' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="34baa664-93df-4f5b-a04b-50f26c720871" InformativeScreenshot="67730f8799d3b9c78f1e4a274b84e505" Selector="&lt;html app='chrome.exe' title='ACME *' /&gt;&lt;webctrl aaname='                          Work Items' tag='BUTTON' innertext='                          Work Items' type='button' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

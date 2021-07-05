@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vygA9zcHtnyVirh9vdyA/AGQ/06mnjLeDNH09jJrd7ArAcuogKICIfzzahbaeXkEx0lo+GI9LXBLtwMyc04+GQ==",
+  "dgSpecHash": "UFY+JvMkYSx1zTTM6iRTkn0/4pg6SKIA+YsFnXw/O7RP1LjpM1DbOePYCuGw0zr7/MGA9VQ3kMXtW02pQ3M92Q==",
   "success": true,
   "projectFilePath": "D:\\Evan\\2-TestGitHub\\1-UiPath\\GenerateYearlyReport\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
+    "C:\\Users\\zhentech.wang\\.nuget\\packages\\credentialmanagement\\1.0.2\\credentialmanagement.1.0.2.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
@@ -47,6 +48,7 @@
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\uipath\\21.4.25.3292\\uipath.21.4.25.3292.nupkg.sha512",
+    "C:\\Users\\zhentech.wang\\.nuget\\packages\\uipath.credentials.activities\\1.1.6479.13204\\uipath.credentials.activities.1.1.6479.13204.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\uipath.excel.activities\\2.10.4\\uipath.excel.activities.2.10.4.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\uipath.ocr.activities\\3.0.0\\uipath.ocr.activities.3.0.0.nupkg.sha512",
     "C:\\Users\\zhentech.wang\\.nuget\\packages\\uipath.ocr.contracts\\2.7.3\\uipath.ocr.contracts.2.7.3.nupkg.sha512",
