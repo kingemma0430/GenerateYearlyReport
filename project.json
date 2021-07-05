@@ -34,7 +34,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "Tests/TestCase_DownloadMonthlyReport.xaml"
+      ]
     },
     "fileInfoCollection": [
       {
