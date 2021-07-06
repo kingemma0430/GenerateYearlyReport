@@ -35,16 +35,11 @@
     },
     "processOptions": {
       "ignoredFiles": [
-        "Tests/TestCase_DownloadMonthlyReport.xaml"
+        "Tests/TestCase_DownloadMonthlyReport.xaml",
+        "Tests/TestCase_UploadYearlyReport.xaml"
       ]
     },
-    "fileInfoCollection": [
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "969ff552-b872-48e0-87a6-246f6cbdc0d2",
-        "fileName": "Tests\\TestCase_UploadYearlyReport.xaml"
-      }
-    ],
+    "fileInfoCollection": [],
     "modernBehavior": false
   },
   "expressionLanguage": "CSharp",

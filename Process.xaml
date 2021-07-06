@@ -5,7 +5,7 @@
     <x:Property Name="in_ACMEWebBrowser" Type="InArgument(ui:Browser)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>959,852</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>645,1116</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -21,6 +21,8 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -50,9 +52,15 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="376,687" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process-Download and Upload" sap:VirtualizedContainerService.HintSize="655,951" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TaxId" />
+      <Variable x:TypeArguments="s:Exception" Name="DownloadMonthlyReportException" />
+      <Variable x:TypeArguments="s:Exception" Name="UploadYearlyReportException">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">null</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -60,8 +68,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-    <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="613,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <Assign sap:VirtualizedContainerService.HintSize="613,61" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">TaxId</mca:CSharpReference>
@@ -73,7 +81,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ACME\\DownloadMonthlyReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="613,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ACME\\DownloadMonthlyReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_TaxID">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">TaxId</mca:CSharpValue>
@@ -84,9 +92,12 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
           <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">in_Config</mca:CSharpValue>
         </InArgument>
+        <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception">
+          <mca:CSharpReference x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">DownloadMonthlyReportException</mca:CSharpReference>
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ACME\\UploadYearlyReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="613,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ACME\\UploadYearlyReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="ui:Browser" x:Key="in_ACMEWebBrowser">
           <mca:CSharpValue x:TypeArguments="ui:Browser" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_ACMEWebBrowser</mca:CSharpValue>
@@ -95,11 +106,64 @@
           <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_Config</mca:CSharpValue>
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_TaxID">
-          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_TransactionItem.SpecificContent["TaxID"].ToString()</mca:CSharpValue>
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">TaxId</mca:CSharpValue>
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_YearlyReportFilePath" />
-        <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception" />
+        <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception">
+          <mca:CSharpReference x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">DownloadMonthlyReportException</mca:CSharpReference>
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <If sap2010:Annotation.AnnotationText="Check Donload Monthly Reports and Upload yearly reports success or failed" DisplayName="If-Update Transaction Status" sap:VirtualizedContainerService.HintSize="613,275" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">DownloadMonthlyReportException==null &amp;&amp; UploadYearlyReportException==null</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status - Successful " ErrorType="Business" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful">
+          <ui:SetTransactionStatus.Analytics>
+            <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+          </ui:SetTransactionStatus.Analytics>
+          <ui:SetTransactionStatus.Output>
+            <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+          </ui:SetTransactionStatus.Output>
+          <ui:SetTransactionStatus.TransactionItem>
+            <InArgument x:TypeArguments="ui:QueueItem">
+              <mca:CSharpValue x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_TransactionItem</mca:CSharpValue>
+            </InArgument>
+          </ui:SetTransactionStatus.TransactionItem>
+        </ui:SetTransactionStatus>
+      </If.Then>
+      <If.Else>
+        <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status - Failed" ErrorType="Application" sap:VirtualizedContainerService.HintSize="284,81" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_2" Status="Failed">
+          <ui:SetTransactionStatus.Analytics>
+            <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+          </ui:SetTransactionStatus.Analytics>
+          <ui:SetTransactionStatus.Details>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">DownloadMonthlyReportException==null? "Upload Yearly Report failed. Exception Details: " +UploadYearlyReportException.Message:"Download Monthly Reports failed. Exception Details: " +DownloadMonthlyReportException.Message</mca:CSharpValue>
+            </InArgument>
+          </ui:SetTransactionStatus.Details>
+          <ui:SetTransactionStatus.Output>
+            <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+          </ui:SetTransactionStatus.Output>
+          <ui:SetTransactionStatus.Reason>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">DownloadMonthlyReportException==null? "Upload Yearly Report failed. Exception Details: " +UploadYearlyReportException.Message:"Download Monthly Reports failed. Exception Details: " +DownloadMonthlyReportException.Message</mca:CSharpValue>
+            </InArgument>
+          </ui:SetTransactionStatus.Reason>
+          <ui:SetTransactionStatus.TransactionItem>
+            <InArgument x:TypeArguments="ui:QueueItem">
+              <mca:CSharpValue x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_TransactionItem</mca:CSharpValue>
+            </InArgument>
+          </ui:SetTransactionStatus.TransactionItem>
+        </ui:SetTransactionStatus>
+      </If.Else>
+    </If>
   </Sequence>
 </Activity>
