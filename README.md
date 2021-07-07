@@ -9,6 +9,9 @@
 Generate Yearly Report for Vendor
 Download all the monthly reports for a specific vendor and generate a yearly report. 
 
+As 2021 year has no more Monthly Report, so, I just used 2020 as Report year.
+If don't find Monthly Report for a month, it will record it in Log.
+
 Steps: 
 1.1 Open the ACME System 1 web application.
 
