@@ -4,7 +4,7 @@
     <x:Property Name="out_ACMEWebBrowser" Type="OutArgument(ui:Browser)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>650,1702</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1059,1694</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -67,18 +67,18 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <StateMachine InitialState="{x:Reference __ReferenceID0}" sap2010:Annotation.AnnotationText="Generate Yearly Report for Vendor&#xA;Download all the monthly reports for a specific vendor and generate a yearly report. &#xA;&#xA;Steps: &#xA;1.1 Open the ACME System 1 web application.&#xA;&#xA;1.2 Log in to System 1. Required input data: email and password.&#xA;&#xA;1.3 Access the Dashboard - the central location, where the user can pick a specific menu item.&#xA;&#xA;1.4 Access the Work Items Listing to view all the available tasks to be performed (Output data: list of tasks ).&#xA;&#xA;1.5 For each activity of the WI4 type perform the following steps:&#xA;&#xA;1.5.A Open the Details page of the selected activity to retrieve the Vendor Tax ID (Output data: TaxID).&#xA;&#xA;1.5.B Go back to the Dashboard and access the Download Monthly Report section in the Reports menu.&#xA;&#xA;1.5.C Fill in the Vender TaxID and download all the corresponding monthly reports for Current Year&#xA;&#xA;1.5.D Group all the downloaded monthly reports into a single Excel yearly report with the&#xA;“Yearly-Report-2020- TAXID.xlsx” name.&#xA;&#xA;1.5.E Upload the resulting Excel yearly report in the “Upload Yearly Report” section in the Reports menu.&#xA;&#xA;1.5.F Fill in the Vendor TaxID, set the year as Current Year (Top 1 Item), and select the file on your hard drive. This will return a unique upload ID. Out upload ID. &#xA;&#xA;1.5.G Go back to the Work Item Details page and select Update Work Item&#xA;&#xA;1.5.H Set the status to “Completed”. Add the following comment: “Uploaded with ID uploadID”. &#xA;.&#xA;1.6 Continue with the next WI4 activity. &#xA;&#xA;1.7 log out ACME&#xA;" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="660,1537" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID0}" sap2010:Annotation.AnnotationText="Generate Yearly Report for Vendor&#xA;Download all the monthly reports for a specific vendor and generate a yearly report. &#xA;&#xA;Steps: &#xA;1.1 Open the ACME System 1 web application.&#xA;&#xA;1.2 Log in to System 1. Required input data: email and password.&#xA;&#xA;1.3 Access the Dashboard - the central location, where the user can pick a specific menu item.&#xA;&#xA;1.4 Access the Work Items Listing to view all the available tasks to be performed (Output data: list of tasks ).&#xA;&#xA;1.5 For each activity of the WI4 type perform the following steps:&#xA;&#xA;1.5.A Open the Details page of the selected activity to retrieve the Vendor Tax ID (Output data: TaxID).&#xA;&#xA;1.5.B Go back to the Dashboard and access the Download Monthly Report section in the Reports menu.&#xA;&#xA;1.5.C Fill in the Vender TaxID and download all the corresponding monthly reports for Current Year&#xA;&#xA;1.5.D Group all the downloaded monthly reports into a single Excel yearly report with the&#xA;“Yearly-Report-2020- TAXID.xlsx” name.&#xA;&#xA;1.5.E Upload the resulting Excel yearly report in the “Upload Yearly Report” section in the Reports menu.&#xA;&#xA;1.5.F Fill in the Vendor TaxID, set the year as Current Year (Top 1 Item), and select the file on your hard drive. This will return a unique upload ID. Out upload ID. &#xA;&#xA;1.5.G Go back to the Work Item Details page and select Update Work Item&#xA;&#xA;1.5.H Set the status to “Completed”. Add the following comment: “Uploaded with ID uploadID”. &#xA;.&#xA;1.6 Continue with the next WI4 activity. &#xA;&#xA;1.7 log out ACME&#xA;" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="686,1529" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">10,42.5</av:Point>
-        <x:Double x:Key="StateContainerWidth">626</x:Double>
-        <x:Double x:Key="StateContainerHeight">860</x:Double>
+        <x:Double x:Key="StateContainerWidth">652</x:Double>
+        <x:Double x:Key="StateContainerHeight">869</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        <av:PointCollection x:Key="ConnectorLocation">67,117.5 67,131.15 313,131.15</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">67,117.5 67,123.45 313,123.45</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Read configuration file and initialize ACME applications used in the process.&#xA;1. Extract WorkItems data&#xA;2. Go to Work Items Detail Page and extract TaxId and then Save TaxId into QueueItems&#xA;" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="236,223" sap2010:WorkflowViewState.IdRef="State_4">
+    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Read configuration file and initialize ACME applications used in the process.&#xA;1. Extract WorkItems data&#xA;2. Go to Work Items Detail Page and extract TaxId and then Save TaxId into QueueItems&#xA;" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="266,209" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="642,3728" sap2010:WorkflowViewState.IdRef="TryCatch_1">
           <TryCatch.Try>
@@ -327,7 +327,7 @@
             <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="608,439" sap2010:WorkflowViewState.IdRef="Catch`1_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -374,25 +374,25 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">313,8.5</av:Point>
-          <av:Size x:Key="ShapeSize">236,223</av:Size>
+          <av:Size x:Key="ShapeSize">266,209</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Double x:Key="StateContainerWidth">202</x:Double>
-          <x:Double x:Key="StateContainerHeight">38.519999999999982</x:Double>
+          <x:Double x:Key="StateContainerWidth">232</x:Double>
+          <x:Double x:Key="StateContainerHeight">25</x:Double>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <State.Transitions>
         <Transition DisplayName="Successful" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">442.8,231.5 442.8,261.5 400.75,261.5 400.75,299.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">459.3,217.5 459.3,247.5 408.45,247.5 408.45,299.5</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="225,116" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="239,120" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <Sequence sap2010:Annotation.AnnotationText="Retrieve a new transaction data to be processed.&#xA;The TransactionNumber variable holds the current transaction number and incrementing this variable makes the framework retrieve the next transaction. If the framework is retrying a failed transaction, this variable is not incremented until the maximum number of retry attempts is reached." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="901,1188" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
@@ -450,27 +450,16 @@
                         <TryCatch.Try>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetTransactionData workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\GetTransactionData.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_TransactionData">
-                                <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">TransactionData</mca:CSharpReference>
-                              </InOutArgument>
-                              <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">
-                                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">TransactionNumber</mca:CSharpValue>
-                              </InArgument>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
                                 <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">Config</mca:CSharpValue>
                               </InArgument>
                               <OutArgument x:TypeArguments="ui:QueueItem" x:Key="out_TransactionItem">
                                 <mca:CSharpReference x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">TransactionItem</mca:CSharpReference>
                               </OutArgument>
-                              <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionField1">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">TransactionField1</mca:CSharpReference>
-                              </OutArgument>
-                              <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionField2">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">TransactionField2</mca:CSharpReference>
-                              </OutArgument>
-                              <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionID">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">TransactionID</mca:CSharpReference>
-                              </OutArgument>
+                              <OutArgument x:TypeArguments="x:String" x:Key="out_TaxId" />
+                              <InOutArgument x:TypeArguments="s:Exception" x:Key="io_SystemExceltion">
+                                <mca:CSharpReference x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">GlobalSystemException</mca:CSharpReference>
+                              </InOutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </TryCatch.Try>
@@ -523,25 +512,25 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">277,299.5</av:Point>
-                  <av:Size x:Key="ShapeSize">225,116</av:Size>
+                  <av:Size x:Key="ShapeSize">239,120</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Double x:Key="StateContainerWidth">191</x:Double>
-                  <x:Double x:Key="StateContainerHeight">33.519999999999982</x:Double>
+                  <x:Double x:Key="StateContainerWidth">205</x:Double>
+                  <x:Double x:Key="StateContainerHeight">37.519999999999982</x:Double>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <State.Transitions>
                 <Transition DisplayName="No Data" sap2010:WorkflowViewState.IdRef="Transition_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">389.5,415.5 389.5,486.5 72.4,486.5 72.4,456.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">396.5,419.5 396.5,486.5 72.4,486.5 72.4,456.5</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">31</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="End process and close all applications used.&#xA;" DisplayName="End Process" sap:VirtualizedContainerService.HintSize="484,1005" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
+                    <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="End process and close all applications used.&#xA;" DisplayName="End Process" sap:VirtualizedContainerService.HintSize="176,124" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
                       <State.Entry>
                         <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="438,844" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                           <TryCatch.Try>
@@ -623,7 +612,7 @@
                 <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="450,796" sap2010:WorkflowViewState.IdRef="Transition_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">389.5,415.5 389.5,445.5 310,445.5 310,516</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">396.5,419.5 396.5,449.5 310,449.5 310,516</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                     </scg:Dictionary>
@@ -659,7 +648,9 @@
                                   <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
                                     <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">Config</mca:CSharpValue>
                                   </InArgument>
-                                  <InArgument x:TypeArguments="ui:Browser" x:Key="in_ACMEWebBrowser" />
+                                  <InArgument x:TypeArguments="ui:Browser" x:Key="in_ACMEWebBrowser">
+                                    <mca:CSharpValue x:TypeArguments="ui:Browser" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">ACMEWebBrowser</mca:CSharpValue>
+                                  </InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </Sequence>
@@ -791,7 +782,7 @@
                         <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="450,541" sap2010:WorkflowViewState.IdRef="Transition_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">310,835 310,851.15 579,851.15 579,131.15 549,131.15</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">310,835 310,865 609,865 609,123.45 579,123.45</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
                             </scg:Dictionary>
@@ -806,7 +797,7 @@
                         <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="450,867" sap2010:WorkflowViewState.IdRef="Transition_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">310,835 310,855.9 532,855.9 532,345.9 502,345.9</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">310,835 310,857.5 546,857.5 546,347.5 516,347.5</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">28</x:Int32>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -822,7 +813,7 @@
                         <Transition sap2010:Annotation.AnnotationText="There is no need for any action in case of successful transaction.&#xA;The process should simply go to next transaction." DisplayName="Success" sap:VirtualizedContainerService.HintSize="450,556" sap2010:WorkflowViewState.IdRef="Transition_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">284.5,835 284.5,854.9 532,854.9 532,374.9 502,374.9</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">284.5,835 284.5,857.5 546,857.5 546,377.5 516,377.5</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">31</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">48</x:Int32>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -864,7 +855,7 @@
         <Transition DisplayName="System Exception (failed initialization)" sap:VirtualizedContainerService.HintSize="450,796" sap2010:WorkflowViewState.IdRef="Transition_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">442.8,231.5 442.8,261.5 72.4,261.5 72.4,332.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">459.3,217.5 459.3,247.5 72.4,247.5 72.4,332.5</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">30</x:Int32>
             </scg:Dictionary>
@@ -887,8 +878,6 @@
         </Transition>
       </State.Transitions>
       <State.Variables>
-        <Variable x:TypeArguments="s:Exception" sap2010:Annotation.AnnotationText="Used during transitions between states to represent exceptions other than business exceptions." Name="GlobalSystemException" />
-        <Variable x:TypeArguments="ui:Browser" Name="ACMEWebBrowser" />
         <Variable x:TypeArguments="x:Boolean" Default="False" Name="IsLoginSuccess" />
       </State.Variables>
     </State>
