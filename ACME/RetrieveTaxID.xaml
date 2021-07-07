@@ -6,7 +6,7 @@
     <x:Property Name="io_TaxIdList" Type="InOutArgument(scg:List(x:String))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1120,2723</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1030,3172</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -84,7 +84,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RetrieveTaxID" sap:VirtualizedContainerService.HintSize="710,2558" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RetrieveTaxID" sap:VirtualizedContainerService.HintSize="1040,3007" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TaxId" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="WorkItemDetails" />
@@ -104,7 +104,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:NavigateTo ContinueOnError="True" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="668,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1">
+    <ui:NavigateTo ContinueOnError="True" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="998,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1">
       <ui:NavigateTo.Browser>
         <InArgument x:TypeArguments="ui:Browser">
           <mca:CSharpValue x:TypeArguments="ui:Browser" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">in_ACMEWebBrowser</mca:CSharpValue>
@@ -116,7 +116,7 @@
         </InArgument>
       </ui:NavigateTo.Url>
     </ui:NavigateTo>
-    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text -VenderInfomation" sap:VirtualizedContainerService.HintSize="668,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text -VenderInfomation" sap:VirtualizedContainerService.HintSize="998,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
       <ui:GetValue.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd8b03eb-c4a9-4285-83e5-5219ca9cdad1" InformativeScreenshot="63f012ea4a1acea20d4bed2449c0895d" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;&lt;webctrl tag='P' /&gt;">
           <ui:Target.TimeoutMS>
@@ -133,7 +133,7 @@
         </OutArgument>
       </ui:GetValue.Value>
     </ui:GetValue>
-    <If sap2010:Annotation.AnnotationText="Extract TaxId, Name and Address and then Add into Queues in Orchestrator" sap:VirtualizedContainerService.HintSize="668,2221" sap2010:WorkflowViewState.IdRef="If_2">
+    <If sap2010:Annotation.AnnotationText="Extract TaxId, Name and Address and then Add into Queues in Orchestrator" sap:VirtualizedContainerService.HintSize="998,2670" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">!string.IsNullOrEmpty(WorkItemDetailInfo) &amp;&amp; WorkItemDetailInfo.Contains("TaxID")</mca:CSharpValue>
@@ -147,7 +147,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="Extract TaxId, Name and Address and then Add into Queues in Orchestrator" DisplayName="Sequence-Extract TaxId, Name and Address and then Add into Queues in Orchestrator" sap:VirtualizedContainerService.HintSize="632,2006" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap2010:Annotation.AnnotationText="Extract TaxId, Name and Address and then Add into Queues in Orchestrator" DisplayName="Sequence-Extract TaxId, Name and Address and then Add into Queues in Orchestrator" sap:VirtualizedContainerService.HintSize="962,2455" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -155,7 +155,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign-Split Extracted String to List" sap:VirtualizedContainerService.HintSize="590,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+          <Assign DisplayName="Assign-Split Extracted String to List" sap:VirtualizedContainerService.HintSize="920,61" sap2010:WorkflowViewState.IdRef="Assign_9">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:List(x:String)">
                 <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">WorkItemDetails</mca:CSharpReference>
@@ -167,7 +167,7 @@
               </InArgument>
             </Assign.Value>
           </Assign>
-          <If sap2010:Annotation.AnnotationText="If WorkItemDetails has values&#xA;Extract TaxId, Name and Address and then Add into Queues in Orchestrator" DisplayName="If-Check WorkItemDetails" sap:VirtualizedContainerService.HintSize="590,1782" sap2010:WorkflowViewState.IdRef="If_3">
+          <If sap2010:Annotation.AnnotationText="If WorkItemDetails has values&#xA;Extract TaxId, Name and Address and then Add into Queues in Orchestrator" DisplayName="If-Check WorkItemDetails" sap:VirtualizedContainerService.HintSize="920,2231" sap2010:WorkflowViewState.IdRef="If_3">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">WorkItemDetails!=null &amp;&amp; WorkItemDetails.Count&gt;0</mca:CSharpValue>
@@ -181,14 +181,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap2010:Annotation.AnnotationText="Assgin Values to TaxId,Name and Address and save into Queues" DisplayName="Sequence-Assgin Values to TaxId,Name and Address and save into Queues" sap:VirtualizedContainerService.HintSize="554,1552" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence sap2010:Annotation.AnnotationText="Assgin Values to TaxId,Name and Address and save into Queues" DisplayName="Sequence-Assgin Values to TaxId,Name and Address and save into Queues" sap:VirtualizedContainerService.HintSize="884,2001" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="512,61" sap2010:WorkflowViewState.IdRef="Assign_14">
+                <Assign sap:VirtualizedContainerService.HintSize="842,61" sap2010:WorkflowViewState.IdRef="Assign_14">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">
                       <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">TaxIdTagString</mca:CSharpReference>
@@ -200,7 +200,7 @@
                     </InArgument>
                   </Assign.Value>
                 </Assign>
-                <If sap2010:Annotation.AnnotationText="Check TaxId.&#xA;If taxId is empty or null will skip save into Queues" DisplayName="If-Check TaxID" sap:VirtualizedContainerService.HintSize="512,1328" sap2010:WorkflowViewState.IdRef="If_6">
+                <If sap2010:Annotation.AnnotationText="Check TaxId.&#xA;If taxId is empty or null will skip save into Queues" DisplayName="If-Check TaxID" sap:VirtualizedContainerService.HintSize="842,1777" sap2010:WorkflowViewState.IdRef="If_6">
                   <If.Condition>
                     <InArgument x:TypeArguments="x:Boolean">
                       <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">!string.IsNullOrEmpty(TaxIdTagString)</mca:CSharpValue>
@@ -212,7 +212,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence sap2010:Annotation.AnnotationText="Extract TaxId, Name and Address and then Add into Queues in Orchestrator" DisplayName="Sequence-Assing TaxId,Name and Address" sap:VirtualizedContainerService.HintSize="476,1098" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence sap2010:Annotation.AnnotationText="Extract TaxId, Name and Address and then Add into Queues in Orchestrator" DisplayName="Sequence-Assing TaxId,Name and Address" sap:VirtualizedContainerService.HintSize="806,1547" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -220,7 +220,7 @@
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign-Name" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign DisplayName="Assign-Name" sap:VirtualizedContainerService.HintSize="764,61" sap2010:WorkflowViewState.IdRef="Assign_15">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">
                             <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">NameTagString</mca:CSharpReference>
@@ -232,7 +232,7 @@
                           </InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If DisplayName="If-Check Name is empty" sap:VirtualizedContainerService.HintSize="434,53" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If DisplayName="If-Check Name is empty" sap:VirtualizedContainerService.HintSize="764,53" sap2010:WorkflowViewState.IdRef="If_5">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">!string.IsNullOrEmpty(NameTagString)</mca:CSharpValue>
@@ -259,7 +259,7 @@
                           </Assign>
                         </If.Then>
                       </If>
-                      <Assign DisplayName="Assign-Address" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign DisplayName="Assign-Address" sap:VirtualizedContainerService.HintSize="764,61" sap2010:WorkflowViewState.IdRef="Assign_10">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">
                             <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">AddressTagString</mca:CSharpReference>
@@ -271,7 +271,7 @@
                           </InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If DisplayName="If-Check Address is empty" sap:VirtualizedContainerService.HintSize="434,53" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If DisplayName="If-Check Address is empty" sap:VirtualizedContainerService.HintSize="764,53" sap2010:WorkflowViewState.IdRef="If_4">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">!string.IsNullOrEmpty(AddressTagString)</mca:CSharpValue>
@@ -298,7 +298,7 @@
                           </Assign>
                         </If.Then>
                       </If>
-                      <Assign DisplayName="Assign-TaxID" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="Assign_17">
+                      <Assign DisplayName="Assign-TaxID" sap:VirtualizedContainerService.HintSize="764,61" sap2010:WorkflowViewState.IdRef="Assign_17">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">
                             <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">TaxId</mca:CSharpReference>
@@ -310,7 +310,7 @@
                           </InArgument>
                         </Assign.Value>
                       </Assign>
-                      <TryCatch DisplayName="Try Catch-Add QueueItems" sap:VirtualizedContainerService.HintSize="434,336" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch DisplayName="Try Catch-Add QueueItems" sap:VirtualizedContainerService.HintSize="764,800" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                         <TryCatch.Try>
                           <Sequence sap:VirtualizedContainerService.HintSize="726,563" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <sap:WorkflowViewStateService.ViewState>
@@ -344,6 +344,9 @@
                                       </InArgument>
                                       <InArgument x:TypeArguments="s:DateTime" x:Key="CreateOnUTCDateTime">
                                         <mca:CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">DateTime.UtcNow</mca:CSharpValue>
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="WorkItemId">
+                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">in_WIID</mca:CSharpValue>
                                       </InArgument>
                                     </ui:AddQueueItem.ItemInformation>
                                     <ui:AddQueueItem.QueueType>
@@ -411,10 +414,10 @@
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,166" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="730,23" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -433,7 +436,7 @@
                           </Catch>
                         </TryCatch.Catches>
                       </TryCatch>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,95" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="764,95" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">string.Format( in_Config["LogMessage_Add_New_QueueItem"].ToString() ,in_Config["OrchestratorQueueName"].ToString() ,TaxId,Name,Address)</mca:CSharpValue>
