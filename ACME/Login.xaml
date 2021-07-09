@@ -219,7 +219,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c12619b4-6fcd-4fd9-8761-cf81cbe1e676" InformativeScreenshot="5c0cfaebca5cc10e09fd9a42ad753023" Selector="&lt;html app='chrome.exe' title='ACME *' /&gt;&lt;webctrl tag='BUTTON' type='submit' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c12619b4-6fcd-4fd9-8761-cf81cbe1e676" InformativeScreenshot="5c0cfaebca5cc10e09fd9a42ad753023" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;&lt;webctrl tag='BUTTON' type='submit' innertext='                             Login                         ' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
